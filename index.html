@@ -102,31 +102,6 @@
 
     // Start your code here
     // You may move this JS to another file if you wish
-    try {
-      console.log("Chilling as usual...")
-      throw `FATAL ERROR!`;
-    }
-    catch(Error) {
-      console.error(Error);
-    }
-    finally {
-      console.log('Just another peaceful day, right?')
-    }
-
-    class customErr extends Error {
-      constructor(message) {
-        super('Custom error: ' + message);
-        this.name = 'FatalError69';
-      }
-    }
-
-    try {
-      maybeGonnaWorkFunction();
-    }
-    catch (err) {
-      console.error("Ain't gonna work, buddy!");
-      throw new customErr("Welp, it dosen't work I guess");
-    }
 
     errorBtns[0].addEventListener('click', () => {
       console.log('Console logging...');
@@ -193,6 +168,31 @@
       throw new Error('FATAL ERROR!');
     })
 
+    try {
+      console.log("Chilling as usual...")
+      throw `FATAL ERROR!`;
+    }
+    catch(Error) {
+      console.error(Error);
+    }
+    finally {
+      console.log('Just another peaceful day, right?')
+    }
+
+    class customErr extends Error {
+      constructor(message) {
+        super(message);
+        this.name = 'FatalError69';
+      }
+    }
+
+    try {
+      maybeGonnaWorkFunction();
+    }
+    catch (err) {
+      console.error("Ain't gonna work, buddy!");
+      throw new customErr("Welp, it dosen't work I guess");
+    }
   </script>
 </body>
 
